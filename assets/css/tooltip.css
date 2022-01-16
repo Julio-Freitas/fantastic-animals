@@ -1,0 +1,15 @@
+.tooltip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 300px;
+  background-color: #f13434cc;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: -1px 1px 5px 1px #fb5;
+  color: #fff;
+  font-weight: bold;
+  font-size: 13px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  z-index: 2000;
+}

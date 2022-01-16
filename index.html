@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Fantastic Animals</title>
+</head>
+
+<body>
+    <div class="grid-container">
+        <nav class="menu">
+            <button data-menu="button" area-expanded="false" aria-controls="menu">Menu</button>
+            <ul class="menu-list" data-menu="list-mobile" id="menu
+            ">
+                <li><a href="#animals">Animais</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li data-dropdown><a href="#sobre">sobre</a>
+                    <ul class="dropdown">
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#animals">Animais</a></li>
+                        <li><button class="loginDropdown">Login</button> </li>
+                    </ul>
+                </li>
+                <li><a href="#contact">Contato</a></li>
+                <li><a href="https://google.com">Dev ➤ </a></li>
+                <li class="menu-login"><button>Login</button> </li>
+            </ul>
+        </nav>
+        <section class="grid-section animals" id="animals" data-animation>
+            <h1 class="title">Animais Fantasticos</h1>
+
+            <ul class="animals-list" data-tab="menu-tab">
+                <li>
+                    <img src="https://static.escolakids.uol.com.br/2021/05/golfinho.jpg" alt="Golfinho cinza no mar" />
+                </li>
+
+                <li>
+                    <img src="http://c.files.bbci.co.uk/9935/production/_121212293_gettyimages-1053558054.jpg"
+                        alt="Elefante  Marfin" />
+                </li>
+
+                <li>
+                    <img src="https://www.petz.com.br/blog/wp-content/uploads/2021/11/animal-mais-bonito-do-mundo2.jpg"
+                        alt="Onça duas cores, litrada em preto e branco" />
+                </li>
+            </ul>
+
+            <div class="description-animals" data-tab="content-tab">
+
+                <section class="active">
+                    <h2 class="title">Golfinho</h2>
+                    <p>Os golfinhos, delfins, peixes-botos, botos ou toninhas são animais cetáceos pertencentes às
+                        famílias
+                        Delphinidae e Platanistidae</p>
+                </section>
+
+                <section>
+                    <h2 class="title">Elefante</h2>
+                    <p>Elefante é o termo genérico e popular pelo qual são denominados os membros da família
+                        Elephantidae,
+                        um grupo de mamíferos proboscídeos elefantídeos, de grande porte, do qual há três espécies no
+                        mundo
+                        atual, duas africanas e uma asiática.</p>
+                </section>
+
+                <section>
+                    <h2 class="title">onça-pintada </h2>
+                    <p>A onça-pintada é o maior felino do continente americano, podendo chegar a 135 kg. É um animal
+                        robusto, com grande força muscular, sendo a potência de sua mordida considerada a maior dentre
+                        os
+                        felinos de todo o mundo.</p>
+                </section>
+            </div>
+        </section>
+
+        <section class="grid-section numbers" data-animation>
+            <h2 class="title">Números</h2>
+            <div class="numbers-grid">
+                <div class="number-animal">
+                    <h3>Lobos</h3>
+                    <span data-number>4874</span>
+                </div>
+
+                <div class="number-animal">
+                    <h3>Raposas</h3>
+                    <span data-number>5374</span>
+                </div>
+
+                <div class="number-animal">
+                    <h3>esquilos</h3>
+                    <span data-number>484</span>
+                </div>
+
+                <div class="number-animal">
+                    <h3>Ursos</h3>
+                    <span data-number>10</span>
+                </div>
+            </div>
+
+        </section>
+        <section class="grid-section faq" id="faq" data-animation>
+            <h1> Faq</h1>
+            <dl class="faq-list" data-accordion="faq-list">
+                <dt>qual idade dos animais</dt>
+                <dd>Os golfinhos, delfins, peixes-botos, botos ou toninhas são animais cetáceos pertencentes às famílias
+                    Delphinidae e Platanistidae.</dd>
+
+                <dt>Diferença entre eles</dt>
+                <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lorem velit, finibus quis dui
+                    ullamcorper, malesuada tincidunt nisl.</dd>
+
+                <dt>ipsum dolor</dt>
+                <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lorem velit, finibus quis dui
+                    ullamcorper, malesuada tincidunt nisl.</dd>
+            </dl>
+        </section>
+
+        <section class="grid-section contato" id="contact" data-animation>
+            <h1 class="title">Contato</h1>
+            <div class="map" data-tooltip area-label="Endereço: Rua São geraldo, nº80 Santa Clara II - Vespasiano">
+                <img src=" https://img.elo7.com.br/product/zoom/294C156/quadro-poster-mapa-mundi-retro.jpg"
+                    alt="mapa do mundo">
+            </div>
+
+            <ul class="dados">
+                <li>test@gmail.com</li>
+                <li>+55 31 98729-6252</li>
+                <li>Rua São geraldo, nº80</li>
+                <li>Santa Clara II - Vespasiano</li>
+                <li class="workflow">Horario de functionamento
+                    <div data-dayWeek="1,2,3,4,5" data-time="8,18">Seg - Sex 8 às 18</div>
+                </li>
+            </ul>
+        </section>
+
+        <p class="copy">Direitos reservados</p>
+
+        <div class="arrowUp" id="backTop"></div>
+        <script type="module" src="./assets/js/index.js"></script>
+    </div>
+
+    <section class="modal" data-modal="section">
+        <div class="modal-content">
+            <button type="button" class="modal-go-out">x</button>
+            <form action="">
+                <label for="">nome</label>
+                <input type="text">
+                <label for="">email</label>
+                <input type="email">
+                <button type="button">Login</button>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>

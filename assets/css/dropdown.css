@@ -1,0 +1,58 @@
+.menu-list .dropdown {
+  background-color: #f1c40f;
+  position: absolute;
+  top: 80px;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0 0 0 5px #e67e22;
+  border: 3px solid #f39c12;
+  visibility: hidden;
+  display: none;
+}
+
+[data-dropdown]:focus ul.dropdown,
+[data-dropdown].active-dropdown ul.dropdown {
+  animation: dropdownShow 0.5s forwards;
+  visibility: visible;
+  display: block;
+}
+
+.menu-list .dropdown::before {
+  content: ' ';
+  position: absolute;
+  top: -18px;
+  border-bottom: 10px solid #f39c12;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+
+.menu-list .dropdown li button.loginDropdown {
+  text-align: left;
+}
+
+.menu-list .dropdown li a,
+.dropdown li button {
+  width: 100%;
+}
+
+.menu-list .dropdown li a:hover,
+.menu-list .dropdown li button.loginDropdown:hover {
+  width: 100%;
+  background: #d35400;
+  transition: all 0.5s;
+  color: #fff;
+  font-weight: bold;
+}
+
+@keyframes dropdownShow {
+  from {
+    transform: translate3d(0, -30px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
