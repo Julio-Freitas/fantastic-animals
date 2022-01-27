@@ -1,0 +1,28 @@
+{
+  "name": "fantastic-animals",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development --watch --entry ./assets/js/index.js -o ./assets/js/",
+    "build": "webpack --mode production --entry ./assets/js/index.js -o ./assets/js/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Julio-Freitas/fantastic-animals.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Julio-Freitas/fantastic-animals/issues"
+  },
+  "homepage": "https://github.com/Julio-Freitas/fantastic-animals#readme",
+  "description": "",
+  "devDependencies": {
+    "eslint": "^8.7.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4",
+    "webpack": "^5.67.0",
+    "webpack-cli": "^4.9.2"
+  }
+}

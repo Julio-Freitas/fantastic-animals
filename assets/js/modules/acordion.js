@@ -11,15 +11,15 @@ export default function accordionInit() {
   firsElment.classList.add('active');
   nextElementSibling.classList.add('active');
 
-  nextElementSibling.style.maxHeight = nextElementSibling.scrollHeight + 'px';
+  nextElementSibling.style.maxHeight = `${nextElementSibling.scrollHeight}px`;
 
   function handlefaq(event) {
     const item = event.currentTarget;
-    const { nextElementSibling } = item;
+    const { nextElementSibling: itemSibling } = item;
 
     item.classList.toggle('active');
-    nextElementSibling.classList.toggle('active');
-    nextElementSibling.style.maxHeight = nextElementSibling.scrollHeight + 'px';
+    itemSibling.classList.toggle('active');
+    itemSibling.style.maxHeight = `${itemSibling.scrollHeight}px`;
   }
 
   faqList.forEach((faq) => {

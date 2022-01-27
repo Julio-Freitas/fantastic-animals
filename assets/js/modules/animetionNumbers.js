@@ -2,8 +2,9 @@
 const numbers = document.querySelectorAll('[data-number]');
 const targetObserve = document.querySelector('.numbers');
 const elementWithNumbers = [];
+let observeElement;
 
-numbers.forEach((number, index) => {
+numbers.forEach((number) => {
   const total = Number(number.innerText);
   elementWithNumbers.push({
     value: total,
@@ -19,11 +20,11 @@ function animete() {
 
   elementWithNumbers.forEach((item) => {
     const total = item.value;
-    const element = item.element;
-    let increment = Math.floor(total / minValue[0]);
+    const { element } = item;
+    const increment = Math.floor(total / minValue[0]);
     let start = 0;
     const timer = setInterval(() => {
-      start = start + increment;
+      start += increment;
       element.innerText = start;
       if (start > total) {
         element.innerText = total;
@@ -40,7 +41,8 @@ function _handleMutation(mutation) {
   }
 }
 
-const observeElement = new MutationObserver(_handleMutation);
+observeElement = new MutationObserver(_handleMutation);
+
 observeElement.observe(targetObserve, { attributes: true });
 
 export default function animationNumberInit() {
