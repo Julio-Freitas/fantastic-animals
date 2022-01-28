@@ -5,15 +5,15 @@ export default function menuNavigator() {
   function moveSectionTo(event) {
     event.preventDefault();
 
-    const hashLink = event.target.getAttribute('href');
+    const hashLink = event.target.getAttribute("href");
     const section = document.querySelector(hashLink);
     section.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
+      behavior: "smooth",
+      block: "start",
     });
   }
 
   linksMenu.forEach((link) => {
-    link.addEventListener('click', moveSectionTo);
+    link.addEventListener("click", moveSectionTo);
   });
 }
