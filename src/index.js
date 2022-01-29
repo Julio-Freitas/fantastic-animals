@@ -1,5 +1,5 @@
 // @ts-nocheck
-import activeTab from "./modules/tab-menu.js";
+import TabMenu from "./modules/tab-nav.js";
 import Accordion from "./modules/acordion.js";
 import MenuNavigator from "./modules/menu-navigator.js";
 import animateSection from "./modules/animate-section.js";
@@ -17,7 +17,12 @@ softScroll.init();
 const accordion = new Accordion('[data-accordion="faq-list"] dt');
 accordion.init();
 
-activeTab();
+const tabMenu = new TabMenu(
+  "[data-tab='menu-tab'] li",
+  "[data-tab='content-tab'] section"
+);
+tabMenu.init();
+
 animateSection();
 backTop();
 Modal();

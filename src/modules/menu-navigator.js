@@ -17,7 +17,13 @@ export default class MenuNavigator {
 
     const hashLink = event.target.getAttribute("href");
     const section = document.querySelector(hashLink);
-    section.scrollIntoView(this.options);
+    this.scrollToSection(section);
+  }
+
+  scrollToSection(section) {
+    if (section) {
+      section.scrollIntoView(this.options);
+    }
   }
 
   addLinkEvent() {
