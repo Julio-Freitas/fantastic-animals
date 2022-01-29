@@ -1,6 +1,6 @@
 // @ts-nocheck
 import activeTab from "./modules/tab-menu.js";
-import accordionInit from "./modules/acordion.js";
+import Accordion from "./modules/acordion.js";
 import MenuNavigator from "./modules/menu-navigator.js";
 import animateSection from "./modules/animate-section.js";
 import backTop from "./modules/back-top.js";
@@ -14,7 +14,9 @@ import workflowInit from "./modules/workflow.js";
 const softScroll = new MenuNavigator('.menu a[href^="#"');
 softScroll.init();
 
-accordionInit();
+const accordion = new Accordion('[data-accordion="faq-list"] dt');
+accordion.init();
+
 activeTab();
 animateSection();
 backTop();
