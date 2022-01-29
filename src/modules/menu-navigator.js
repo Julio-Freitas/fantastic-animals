@@ -1,19 +1,35 @@
-export default function menuNavigator() {
-  const linksMenu = document.querySelectorAll('.menu a[href^="#"');
+export default class MenuNavigator {
+  constructor(links, options) {
+    this.linksInner = document.querySelectorAll(links);
 
-  if (linksMenu.length < 0) return;
-  function moveSectionTo(event) {
+    if (!options) {
+      this.options = {
+        behavior: "smooth",
+        block: "start",
+      };
+    } else {
+      this.options = options;
+    }
+  }
+
+  moveSectionTo(event) {
     event.preventDefault();
 
     const hashLink = event.target.getAttribute("href");
     const section = document.querySelector(hashLink);
-    section.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
+    section.scrollIntoView(this.options);
+  }
+
+  addLinkEvent() {
+    this.linksInner.forEach((link) => {
+      link.addEventListener("click", this.moveSectionTo.bind(this));
     });
   }
 
-  linksMenu.forEach((link) => {
-    link.addEventListener("click", moveSectionTo);
-  });
+  init() {
+    if (this.linksInner.length) {
+      this.addLinkEvent();
+      return this;
+    }
+  }
 }
