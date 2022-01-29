@@ -5,7 +5,7 @@ import MenuNavigator from "./modules/menu-navigator.js";
 import animateSection from "./modules/animate-section.js";
 import backTop from "./modules/back-top.js";
 import Modal from "./modules/modal.js";
-import TooltipInit from "./modules/tooltips.js";
+import Tooltip from "./modules/tooltips.js";
 import DropdownInit from "./modules/dropdown.js";
 import menuMobileInit from "./modules/menu-mobile.js";
 import animationNumberInit from "./modules/animetionNumbers.js";
@@ -23,10 +23,13 @@ const tabMenu = new TabMenu(
 );
 tabMenu.init();
 
+// const tooltips = document.querySelectorAll('[data-tooltip]');
+const tooltip = new Tooltip("[data-tooltip]");
+tooltip.init();
 animateSection();
 backTop();
 Modal();
-TooltipInit();
+
 DropdownInit();
 menuMobileInit();
 animationNumberInit();
