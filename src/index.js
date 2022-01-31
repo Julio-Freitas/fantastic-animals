@@ -8,7 +8,7 @@ import Modal from "./modules/modal.js";
 import Tooltip from "./modules/tooltips.js";
 import DropdownInit from "./modules/dropdown.js";
 import menuMobileInit from "./modules/menu-mobile.js";
-import animationNumberInit from "./modules/animetionNumbers.js";
+import AnimateNumbers from "./modules/animetionNumbers.js";
 import workflowInit from "./modules/workflow.js";
 
 const softScroll = new MenuNavigator('.menu a[href^="#"');
@@ -32,5 +32,11 @@ Modal();
 
 DropdownInit();
 menuMobileInit();
-animationNumberInit();
+const animateNumbers = new AnimateNumbers(
+  "[data-number]",
+  ".numbers",
+  "activeAnimation"
+);
+animateNumbers.init();
+
 workflowInit();
