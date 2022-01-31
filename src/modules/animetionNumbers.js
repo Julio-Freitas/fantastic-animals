@@ -98,7 +98,7 @@ export default class AnimateNumbers {
 
   _handleMutation(mutation) {
     if (mutation[0].target.classList.contains(this.classObserver)) {
-      observeElement.disconnect();
+      this.observeElement.disconnect();
       this.animete();
     }
   }

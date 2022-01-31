@@ -2,7 +2,7 @@
 import TabMenu from "./modules/tab-nav.js";
 import Accordion from "./modules/acordion.js";
 import MenuNavigator from "./modules/menu-navigator.js";
-import animateSection from "./modules/animate-section.js";
+import AnimateScroll from "./modules/animate-scroll.js";
 import backTop from "./modules/back-top.js";
 import Modal from "./modules/modal.js";
 import Tooltip from "./modules/tooltips.js";
@@ -26,7 +26,9 @@ tabMenu.init();
 // const tooltips = document.querySelectorAll('[data-tooltip]');
 const tooltip = new Tooltip("[data-tooltip]");
 tooltip.init();
-animateSection();
+
+const animateScrollSection = new AnimateScroll("[data-animation]");
+animateScrollSection.init();
 backTop();
 Modal();
 
